@@ -60,11 +60,12 @@ export class FavView extends Favs {
       this.addUser(value)
     }
 
-    userInput.addEventListener('keypress', keyPressed =>
-      keyPressed.key == 'Enter'
-        ? this.addUser(userInput.value)
-        : console.log('failed!')
-    )
+    userInput.addEventListener('keypress', keyPressed => {
+      if (keyPressed.key == 'Enter') {
+        this.addUser(userInput.value)
+        userInput.value = ''
+      }
+    })
   }
 
   update() {
