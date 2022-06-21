@@ -58,6 +58,7 @@ export class FavView extends Favs {
     favBtn.onclick = () => {
       const { value } = this.root.querySelector('.userInput')
       this.addUser(value)
+      userInput.value = ''
     }
 
     userInput.addEventListener('keypress', keyPressed => {
