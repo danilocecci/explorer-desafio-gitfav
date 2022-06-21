@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --font-family: 'Roboto', sans-serif;
+  --color-primary: hsla(240, 9%, 89%, 1);
+  --color-secondary: hsla(355, 91%, 66%, 1);
+  --font-size-thead: 2rem;
+  --line-height-thead: 160%;
+  --font-weight-primary: 700;
+  --font-weight-secondary: 400;
+  --background-color-thead: hsla(194, 72%, 13%, 1);
+  --background-color-row-odd: hsla(195, 61%, 6%, 0.5);
+  --background-color-row-even: hsla(192, 65%, 7%, 1);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+body {
+  background-color: black;
+
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-primary);
+  font-family: var(--font-family);
+  color: var(--color-primary);
+}
+
+.content {
+  max-width: 112rem;
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 11.5rem 0 8.7rem 0;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.form input {
+  min-width: 30rem;
+  height: 4.8rem;
+  background-color: var(--background-color-row-even);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.6rem;
+  color: white;
+}
+
+.form .btnFav {
+  width: 17rem;
+  height: 4.8rem;
+  border: none;
+  background-color: hsla(195, 91%, 25%, 1);
+  border-radius: 0.5rem;
+
+  color: white;
+  font-family: var(--font-family);
+  font-size: 1.4rem;
+  line-height: 146%;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-primary);
+
+  cursor: pointer;
+  transition: background-color 400ms;
+}
+
+.btnFav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.form .btnFav:hover {
+  background-color: white;
+  color: hsla(195, 91%, 25%, 1);
+}
+
+.form .btnFav:hover svg path {
+  fill: hsla(195, 91%, 25%, 1);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 1.2rem;
+  outline: 0.1rem solid hsla(195, 91%, 25%, 1);
+}
+
+table .emptyFav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 4rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+
+  gap: 6rem;
+  height: 300px;
+}
+
+table tr {
+  border-bottom: 0.1rem solid hsla(195, 91%, 25%, 1);
+}
+
+table tr:last-child {
+  border: none;
+}
+
+table td,
+table th {
+  text-align: start;
+  padding-left: 4rem;
+}
+
+table thead {
+  border-radius: 1.2rem;
+  height: 6.4rem;
+}
+
+table thead > tr {
+  background-color: var(--background-color-thead);
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: var(--background-color-row-odd);
+}
+
+tbody > tr:nth-child(even) {
+  background-color: var(--background-color-row-even);
+}
+
+tbody td:nth-child(1) {
+  width: 50.4rem;
+}
+
+tbody td:nth-child(2) {
+  width: 21.8rem;
+}
+
+tbody td:nth-child(3) {
+  width: 22rem;
+}
+
+tbody td:nth-child(4) {
+  width: 17.8rem;
+}
+
+tbody td button {
+  border: none;
+  background: none;
+  color: var(--color-secondary);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-primary);
+  cursor: pointer;
+}
+
+tbody td {
+  height: 10.4rem;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.user span {
+  font-weight: var(--font-weight-secondary);
+}
+
+.user-field {
+  width: fit-content;
+}
+
+.profilePic {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+
+  object-fit: cover;
+}
