@@ -81,7 +81,7 @@ export class FavView extends Favs {
       tr.innerHTML = `
       <td colspan="4">
         <div class="emptyFav">
-          <img src="../assets/estrela.svg" />
+          <img src="./assets/estrela.svg" />
           Nenhum favorito ainda
         </div>
       </td>
